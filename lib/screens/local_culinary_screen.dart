@@ -2,21 +2,13 @@ import 'package:flutter/material.dart';
 
 class LocalCulinaryScreen extends StatelessWidget {
   final List<Map<String, dynamic>> restaurants = [
-    {
-      "name": "Sate Maranggi",
-      "image": "https:/sate_maranggi.jpg",
-      "rating": 4.8
-    },
+    {"name": "Sate Maranggi", "image": "images/sate.jpeg", "rating": 4.8},
     {
       "name": "Nasi Liwet Cianjur",
-      "image": "https://example.com/nasi_liwet.jpg",
+      "image": "images/nasi-liwet-sunda.jpg",
       "rating": 4.5
     },
-    {
-      "name": "Kue Mochi",
-      "image": "https://example.com/kue_mochi.jpg",
-      "rating": 4.7
-    },
+    {"name": "Kue cubir", "image": "images/kuecubir.jpg", "rating": 4.7},
   ];
 
   @override

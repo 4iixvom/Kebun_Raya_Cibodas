@@ -40,14 +40,18 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.green,
-        scaffoldBackgroundColor: Color(0xFFE8F5E9), // Warna latar belakang yang segar
+        scaffoldBackgroundColor:
+            Color(0xFFE8F5E9), // Warna latar belakang yang segar
       ),
       home: Scaffold(
         appBar: AppBar(
           flexibleSpace: Container(
             decoration: BoxDecoration(
               gradient: LinearGradient(
-                colors: [Color(0xFFB2DFDB), Color(0xFF00796B)], // Gradien warna mint
+                colors: [
+                  Color(0xFFB2DFDB),
+                  Color(0xFF00796B)
+                ], // Gradien warna mint
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
               ),
@@ -84,7 +88,8 @@ class _MyAppState extends State<MyApp> {
                     CircleAvatar(
                       radius: 30,
                       backgroundColor: Colors.white,
-                      child: Icon(Icons.person, size: 40, color: Colors.green.shade700),
+                      child: Icon(Icons.person,
+                          size: 40, color: Colors.green.shade700),
                     ),
                     SizedBox(height: 10),
                     Text(
@@ -135,8 +140,9 @@ class _MyAppState extends State<MyApp> {
             BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
             BottomNavigationBarItem(icon: Icon(Icons.map), label: 'Map'),
             BottomNavigationBarItem(icon: Icon(Icons.info), label: 'Info'),
-            BottomNavigationBarItem(icon: Icon(Icons.restaurant), label: 'Culinary'),
-            BottomNavigationBarItem(icon: Icon(Icons.route), label: 'Route'),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.restaurant), label: 'Kuliner'),
+            BottomNavigationBarItem(icon: Icon(Icons.route), label: 'Rute'),
             BottomNavigationBarItem(icon: Icon(Icons.photo), label: 'Gallery'),
             // BottomNavigationBarItem(icon: Icon(Icons.weather), label: 'Weather'),
           ],
