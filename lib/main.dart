@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:wisata_kuliner/screens/gallery_and_events_screen.dart';
+import 'package:wisata_kuliner/screens/settings_screen.dart';
+import 'package:wisata_kuliner/widgets/about_widget.dart';
+import 'package:wisata_kuliner/widgets/language_settings_widget.dart';
 import 'screens/home_screen.dart';
 import 'screens/interactive_map_screen.dart';
 import 'screens/tourist_info_screen.dart';
 import 'screens/local_culinary_screen.dart';
 import 'screens/route_guide_screen.dart';
-// import 'screens/settings_screen.dart'; // Import untuk halaman Settings
-// import 'screens/weather_screen.dart'; // Import untuk WeatherScreen
+import 'screens/weather_screen.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  runApp(MyApp());
+}
 
 class MyApp extends StatefulWidget {
   @override
@@ -24,7 +28,6 @@ class _MyAppState extends State<MyApp> {
     TouristInfoScreen(),
     LocalCulinaryScreen(),
     RouteGuideScreen(),
-    // WeatherScreen(), // Menambahkan WeatherScreen
     GalleryAndEventsScreen(),
   ];
 
@@ -38,10 +41,10 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      title: 'Wisata Kebun Raya Cibodas',
       theme: ThemeData(
         primarySwatch: Colors.green,
-        scaffoldBackgroundColor:
-            Color(0xFFE8F5E9), // Warna latar belakang yang segar
+        scaffoldBackgroundColor: Color(0xFFE8F5E9),
       ),
       home: Scaffold(
         appBar: AppBar(
@@ -49,8 +52,8 @@ class _MyAppState extends State<MyApp> {
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 colors: [
-                  Color(0xFFB2DFDB),
-                  Color(0xFF00796B)
+                  Color.fromARGB(255, 9, 172, 159),
+                  Color.fromARGB(255, 73, 164, 153)
                 ], // Gradien warna mint
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
@@ -87,9 +90,7 @@ class _MyAppState extends State<MyApp> {
                   children: [
                     CircleAvatar(
                       radius: 30,
-                      backgroundColor: Colors.white,
-                      child: Icon(Icons.person,
-                          size: 40, color: Colors.green.shade700),
+                      backgroundImage: AssetImage('images/s.jpeg'),
                     ),
                     SizedBox(height: 10),
                     Text(
@@ -107,28 +108,48 @@ class _MyAppState extends State<MyApp> {
                 leading: Icon(Icons.settings),
                 title: Text('Pengaturan'),
                 onTap: () {
-                  // Tambahkan logika untuk halaman Settings
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) =>
+                            SettingScreen()), // Arahkan ke Settings Screen
+                  );
                 },
               ),
               ListTile(
                 leading: Icon(Icons.language),
                 title: Text('Bahasa'),
                 onTap: () {
-                  // Tambahkan logika untuk pengaturan bahasa
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) =>
+                            LanguageSettingWidget()), // Arahkan ke Language Setting
+                  );
                 },
               ),
               ListTile(
                 leading: Icon(Icons.cloud),
                 title: Text('Cuaca'),
                 onTap: () {
-                  // Tambahkan logika untuk halaman Weather
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) =>
+                            WeatherScreen()), // Arahkan ke Weather Screen
+                  );
                 },
               ),
               ListTile(
                 leading: Icon(Icons.info),
                 title: Text('Tentang'),
                 onTap: () {
-                  // Tambahkan logika untuk halaman About
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) =>
+                            AboutWidget()), // Arahkan ke About Widget
+                  );
                 },
               ),
             ],
@@ -144,7 +165,6 @@ class _MyAppState extends State<MyApp> {
                 icon: Icon(Icons.restaurant), label: 'Kuliner'),
             BottomNavigationBarItem(icon: Icon(Icons.route), label: 'Rute'),
             BottomNavigationBarItem(icon: Icon(Icons.photo), label: 'Gallery'),
-            // BottomNavigationBarItem(icon: Icon(Icons.weather), label: 'Weather'),
           ],
           currentIndex: _selectedIndex,
           selectedItemColor: Colors.green.shade700,

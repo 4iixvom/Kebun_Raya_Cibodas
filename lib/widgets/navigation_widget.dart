@@ -39,7 +39,7 @@ class NavigationWidget extends StatelessWidget {
           child: Column(
             children: [
               Text(
-                "Arahkan kursor mouse ke tombol atau klik untuk navigasi ke lokasi.",
+                "klik untuk navigasi ke lokasi.",
                 style: TextStyle(fontSize: 16),
                 textAlign: TextAlign.center,
               ),

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class SettingScreen extends StatelessWidget {
+class AboutWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Pengaturan')),
+      appBar: AppBar(title: Text('Tentang')),
       body: Center(
-        child: Text('Halaman Pengaturan'),
+        child: Text('Halaman Tentang'),
       ),
     );
   }
