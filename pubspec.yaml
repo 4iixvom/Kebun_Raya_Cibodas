@@ -82,6 +82,9 @@ flutter:
       - images/kopicibodas.jpg
       - images/resep-pepes-ikan-cue.jpg
       - images/s.jpeg
+      - images/at.jpg
+      - images/ts.jpg
+      - images/du.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

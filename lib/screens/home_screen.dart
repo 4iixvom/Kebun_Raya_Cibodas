@@ -8,9 +8,9 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   final List<String> imagePaths = [
-    'images/airterjun.jpeg',
-    'images/tamansakura.jpeg',
-    'images/danau.jpeg', // Tambahkan gambar tambahan
+    'images/at.jpg',
+    'images/ts.jpg',
+    'images/du.jpg', // Tambahkan gambar tambahan
   ];
 
   final List<String> imageDescriptions = [
